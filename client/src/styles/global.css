@@ -1,0 +1,30 @@
+/* global.css */
+
+/* 1. Allow the body to grow naturally by default */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh; 
+  /* overflow: hidden;  <-- REMOVE THIS LINE: It's killing your Intro scroll */
+}
+
+/* 2. Center container for Dashboard/Auth pages (Non-scrollable layout) */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px); 
+  overflow: hidden; /* This keeps specific app pages contained */
+}
+
+/* 3. Datepicker fixes */
+.force-down-datepicker .ant-picker-dropdown {
+  top: auto !important; 
+}
+
+/* 4. Keep the scale but ensure it stays within bounds */
+.ant-picker-panel-container {
+  transform: scale(0.85);
+  transform-origin: top center; 
+  border-radius: 12px;
+}
